@@ -1,0 +1,79 @@
+<sw-page class="rootrifs-alert-detail">
+    <template #language-switch>
+        <sw-language-switch @on-change="onChangeLanguage"></sw-language-switch>
+    </template>
+
+    <template #smart-bar-actions>
+        <sw-button :routerLink="{ name: 'rootrifs.alert.list' }" size="small">
+            {{ $t('rootrifs-alert.general.buttonCancel') }}
+        </sw-button>
+        <sw-button-process
+                variant="primary"
+                :isLoading="isLoading"
+                :processSuccess="processSuccess"
+                @process-finish="onProcessFinish"
+                @click="onSave"
+                size="small">
+            {{ $t('rootrifs-alert.general.buttonSave') }}
+        </sw-button-process>
+    </template>
+
+    <template #content>
+        <sw-card-view>
+            <sw-card v-if="alert" :title="$t('rootrifs-alert.detail.cardTitleGeneral')" :isLoading="isLoading">
+                <mt-text-field
+                        :label="$t('rootrifs-alert.detail.labelInternalTitle')"
+                        v-model="alert.internalTitle"
+                        :placeholder="$t('rootrifs-alert.detail.placeholderInternalTitle')">
+                </mt-text-field>
+
+                <sw-entity-single-select
+                        :label="$t('rootrifs-alert.detail.labelSalesChannel')"
+                        v-model:value="alert.salesChannelId"
+                        entity="sales_channel"
+                        :placeholder="$t('rootrifs-alert.detail.placeholderSalesChannel')">
+                </sw-entity-single-select>
+
+                <sw-entity-single-select
+                        :label="$t('rootrifs-alert.detail.labelRule')"
+                        v-model:value="alert.ruleId"
+                        entity="rule"
+                        :placeholder="$t('rootrifs-alert.detail.placeholderRule')">
+                </sw-entity-single-select>
+
+                <mt-switch
+                        :label="$t('rootrifs-alert.detail.labelActive')"
+                        v-model="alert.active">
+                </mt-switch>
+            </sw-card>
+
+            <sw-card v-if="alert" :title="$t('rootrifs-alert.detail.cardTitleDesign')" :isLoading="isLoading">
+                <mt-select
+                        :label="$t('rootrifs-alert.detail.labelStyle')"
+                        v-model="alert.style"
+                        :options="styleOptions">
+                </mt-select>
+
+                <mt-select
+                        :label="$t('rootrifs-alert.detail.labelPosition')"
+                        v-model="alert.position"
+                        :options="positionOptions">
+                </mt-select>
+
+                <mt-text-field
+                        :label="$t('rootrifs-alert.detail.labelHeading')"
+                        v-model="alert.heading"
+                        :placeholder="$t('rootrifs-alert.detail.placeholderHeading')">
+                </mt-text-field>
+
+                <sw-text-editor
+                        :label="$t('rootrifs-alert.detail.labelMessage')"
+                        v-model:value="alert.message"
+                        :allow-html="true"
+                        sanitize="false"
+                        :placeholder="$t('rootrifs-alert.detail.placeholderMessage')">
+                </sw-text-editor>
+            </sw-card>
+        </sw-card-view>
+    </template>
+</sw-page>

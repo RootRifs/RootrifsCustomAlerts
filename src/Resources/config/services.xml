@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="Rootrifs\CustomAlerts\Core\Content\Alert\AlertDefinition">
+            <tag name="shopware.entity.definition" entity="rootrifs_custom_alert" />
+        </service>
+
+        <service id="Rootrifs\CustomAlerts\Core\Content\Alert\Aggregate\AlertTranslation\AlertTranslationDefinition">
+            <tag name="shopware.entity.definition" entity="rootrifs_custom_alert_translation" />
+        </service>
+
+        <service id="Rootrifs\CustomAlerts\Subscriber\AlertSubscriber">
+            <argument type="service" id="rootrifs_custom_alert.repository"/>
+            <tag name="kernel.event_subscriber"/>
+        </service>
+    </services>
+</container>

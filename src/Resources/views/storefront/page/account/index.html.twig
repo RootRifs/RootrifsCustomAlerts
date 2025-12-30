@@ -1,0 +1,17 @@
+{% sw_extends '@Storefront/storefront/page/account/index.html.twig' %}
+
+{% block page_account_overview_welcome %}
+    {% if page.extensions.rootrifs_custom_alerts %}
+        {% for alert in page.extensions.rootrifs_custom_alerts %}
+            {% if alert.position == 'account' %}
+                {% sw_include '@Storefront/storefront/utilities/alert.html.twig' with {
+                    type: alert.style,
+                    heading:  alert.heading,
+                    content: alert.message|raw
+                } %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    {{ parent() }}
+{% endblock %}

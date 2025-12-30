@@ -1,0 +1,41 @@
+{
+    "name": "rootrifs/custom-alerts",
+    "description": "Eigene Alerts im Shop Anzeigen lassen",
+    "version": "v1.0.0",
+    "type": "shopware-platform-plugin",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "Rootrifs\\CustomAlerts\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Robert Otto",
+            "homepage": "https://rootrifs.de/plugins/"
+        }
+    ],
+    "require": {
+        "shopware/core": ">=6.6.0.0"
+    },
+    "extra": {
+        "shopware-plugin-class": "Rootrifs\\CustomAlerts\\RootrifsCustomAlerts",
+        "plugin-icon": "src/Resources/config/plugin.png",
+        "label": {
+            "de-DE": "Eigene Alerts im Shop Anzeigen lassen",
+            "en-GB": "Show Custom Alerts in Shop"
+        },
+        "description": {
+            "de-DE": "Eigene Alerts im Shop Anzeigen lassen",
+            "en-GB": "Show Custom Alerts in Shop"
+        },
+        "manufacturerLink": {
+            "de-DE": "https://rootrifs.de/plugins/",
+            "en-GB": "https://rootrifs.de/plugins/"
+        },
+        "supportLink": {
+            "de-DE": "https://rootrifs.de/kontakt/",
+            "en-GB": "https://rootrifs.de/kontakt"
+        }
+    }
+}

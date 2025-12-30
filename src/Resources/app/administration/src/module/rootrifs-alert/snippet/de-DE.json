@@ -1,0 +1,54 @@
+{
+    "rootrifs-alert": {
+        "general": {
+            "mainMenuItemGeneral": "Alert Meldungen",
+            "descriptionTextModule": "Verwalte flexible Alerts für den Storefront",
+            "buttonCreate": "Alert erstellen",
+            "buttonCancel": "Abbrechen",
+            "buttonSave": "Speichern"
+        },
+        "list": {
+            "columnTitle": "Interner Titel",
+            "columnActive": "Aktiv",
+            "columnMessage": "Nachricht",
+            "columnPosition": "Position",
+            "columnStyle": "Style",
+            "emptyTitle": "Keine Alerts gefunden",
+            "emptySubline": "Erstelle deinen ersten Alert, um wichtige Informationen im Storefront anzuzeigen."
+        },
+        "detail": {
+            "cardTitleGeneral": "Allgemeine Informationen",
+            "cardTitleDesign": "Alert Design & Inhalt",
+            "labelInternalTitle": "Interner Titel",
+            "placeholderInternalTitle": "z.B. Wartungsarbeit Info",
+            "labelSalesChannel": "Verkaufskanal",
+            "placeholderSalesChannel": "Alle Verkaufskanäle",
+            "labelRule": "Regel (Rule Builder)",
+            "placeholderRule": "Keine Regel",
+            "labelActive": "Aktiv",
+            "labelStyle": "Style",
+            "labelPosition": "Anzeige-Position",
+            "labelMessage": "Nachricht",
+            "placeholderMessage": "Alert Text hier eingeben...",
+            "messageSaveSuccess": "Alert erfolgreich gespeichert",
+            "messageSaveError": "Fehler beim Speichern des Alerts",
+            "labelHeading": "Überschrift / Titel (Frontend)",
+            "placeholderHeading": "z.B. Achtung Kunden!"
+        },
+        "options": {
+            "style": {
+                "info": "Info (Blau)",
+                "success": "Erfolg (Grün)",
+                "warning": "Warnung (Gelb)",
+                "danger": "Gefahr (Rot)"
+            },
+            "position": {
+                "minicart": "Mini-Warenkorb",
+                "cart": "Warenkorb",
+                "checkout": "Checkout (Bestätigung)",
+                "account": "Benutzerkonto (Dashboard)",
+                "productdetail": "Produktseite"
+            }
+        }
+    }
+}

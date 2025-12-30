@@ -1,0 +1,15 @@
+{% sw_extends '@Storefront/storefront/component/checkout/offcanvas-cart.html.twig' %}
+
+{% block component_offcanvas_cart_flashbags %}
+    {% for alert in page.extensions.rootrifs_custom_alerts %}
+        {% if alert.position == 'minicart' %}
+            {% sw_include '@Storefront/storefront/utilities/alert.html.twig' with {
+                type: alert.style,
+                heading:  alert.heading,
+                content: alert.message|raw
+            } %}
+        {% endif %}
+    {% endfor %}
+
+    {{ parent() }}
+{% endblock %}

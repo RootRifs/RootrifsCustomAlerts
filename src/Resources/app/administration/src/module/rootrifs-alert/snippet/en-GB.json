@@ -1,0 +1,54 @@
+{
+    "rootrifs-alert": {
+        "general": {
+            "mainMenuItemGeneral": "Custom Alerts",
+            "descriptionTextModule": "Manage flexible alerts for the storefront",
+            "buttonCreate": "Create Alert",
+            "buttonCancel": "Cancel",
+            "buttonSave": "Save"
+        },
+        "list": {
+            "columnTitle": "Internal Title",
+            "columnActive": "Active",
+            "columnMessage": "Message",
+            "columnPosition": "Position",
+            "columnStyle": "Style",
+            "emptyTitle": "No alerts found",
+            "emptySubline": "Create your first alert to display important information in the storefront."
+        },
+        "detail": {
+            "cardTitleGeneral": "General Information",
+            "cardTitleDesign": "Alert Design & Content",
+            "labelInternalTitle": "Internal Title",
+            "placeholderInternalTitle": "e.g. Maintenance Info",
+            "labelSalesChannel": "Sales Channel",
+            "placeholderSalesChannel": "All Sales Channels",
+            "labelRule": "Rule (Rule Builder)",
+            "placeholderRule": "No Rule",
+            "labelActive": "Active",
+            "labelStyle": "Style",
+            "labelPosition": "Display Position",
+            "labelMessage": "Message",
+            "placeholderMessage": "Enter alert text here...",
+            "messageSaveSuccess": "Alert saved successfully",
+            "messageSaveError": "Error while saving the alert",
+            "labelHeading": "Überschrift / Titel (Frontend)",
+            "placeholderHeading": "z.B. Achtung Kunden!"
+        },
+        "options": {
+            "style": {
+                "info": "Info (Blue)",
+                "success": "Success (Green)",
+                "warning": "Warning (Yellow)",
+                "danger": "Danger (Red)"
+            },
+            "position": {
+                "minicart": "Mini-Cart",
+                "cart": "Cart",
+                "checkout": "Checkout (Confirm)",
+                "account": "Account (Dashboard)",
+                "productdetail": "Product Detail Page"
+            }
+        }
+    }
+}

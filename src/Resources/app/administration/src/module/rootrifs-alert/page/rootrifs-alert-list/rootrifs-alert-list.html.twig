@@ -1,0 +1,36 @@
+<sw-page class="rootrifs-alert-list">
+    <template #smart-bar-actions>
+        <sw-button variant="primary" :routerLink="{ name: 'rootrifs.alert.create' }">
+            {{ $t('rootrifs-alert.general.buttonCreate') }}
+        </sw-button>
+    </template>
+
+    <template #content>
+        <sw-entity-listing
+                v-if="alerts"
+                :items="alerts"
+                :repository="repository"
+                :columns="columns"
+                :isLoading="isLoading"
+                :allowInlineEdit="true"
+                :showSelection="true">
+
+            {# Hier übersetzen wir die Position-Werte in der Liste für eine bessere Lesbarkeit #}
+            <template #column-position="{ item }">
+                {{ $t('rootrifs-alert.options.position.' + item.position) }}
+            </template>
+
+            {# Hier übersetzen wir die Style-Werte in der Liste #}
+            <template #column-style="{ item }">
+                {{ $t('rootrifs-alert.options.style.' + item.style) }}
+            </template>
+
+        </sw-entity-listing>
+
+        <sw-empty-state
+                v-if="!isLoading && !alerts.length"
+                :title="$t('rootrifs-alert.list.emptyTitle')"
+                :subline="$t('rootrifs-alert.list.emptySubline')">
+        </sw-empty-state>
+    </template>
+</sw-page>

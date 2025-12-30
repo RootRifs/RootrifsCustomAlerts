@@ -1,0 +1,17 @@
+{% sw_extends '@Storefront/storefront/page/checkout/cart/index.html.twig' %}
+{#page_checkout_cart_add_promotion#}
+{% block page_checkout_container %}
+    {% if page.extensions.rootrifs_custom_alerts %}
+        {% for alert in page.extensions.rootrifs_custom_alerts %}
+            {% if alert.position == 'cart' %}
+                {% sw_include '@Storefront/storefront/utilities/alert.html.twig' with {
+                    type: alert.style,
+                    heading:  alert.heading,
+                    content: alert.message|raw
+                } %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    {{ parent() }}
+{% endblock %}
