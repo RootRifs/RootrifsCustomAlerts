@@ -1,4 +1,4 @@
-# Gutscheincode Eingabe im letzten Bestellschritt
+# Eigene Alert Meldungen erstellen
 
 ![Shopware v6.6.x – v6.7.x](https://img.shields.io/badge/Shopware-v6.6.x--v6.7.x-blue?style=for-the-badge&logo=shopware)
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
