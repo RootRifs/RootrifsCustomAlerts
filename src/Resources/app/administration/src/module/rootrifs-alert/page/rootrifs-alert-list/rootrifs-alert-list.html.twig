@@ -15,12 +15,10 @@
                 :allowInlineEdit="true"
                 :showSelection="true">
 
-            {# Hier übersetzen wir die Position-Werte in der Liste für eine bessere Lesbarkeit #}
             <template #column-position="{ item }">
                 {{ $t('rootrifs-alert.options.position.' + item.position) }}
             </template>
 
-            {# Hier übersetzen wir die Style-Werte in der Liste #}
             <template #column-style="{ item }">
                 {{ $t('rootrifs-alert.options.style.' + item.style) }}
             </template>

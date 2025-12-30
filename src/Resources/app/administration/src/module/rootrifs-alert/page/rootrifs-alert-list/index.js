@@ -54,7 +54,6 @@ Component.register('rootrifs-alert-list', {
             this.isLoading = true;
             const criteria = new Criteria();
 
-            // Wir laden die SalesChannel Association mit, falls wir den Namen in der Liste anzeigen wollen
             criteria.addAssociation('salesChannel');
 
             return this.repository.search(criteria, Shopware.Context.api).then((result) => {

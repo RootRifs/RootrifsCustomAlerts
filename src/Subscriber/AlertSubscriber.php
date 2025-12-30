@@ -19,7 +19,6 @@ class AlertSubscriber implements EventSubscriberInterface
     public static function getSubscribedEvents(): array
     {
         return [
-            // GenericPageLoadedEvent deckt fast alles ab, PageLoadedEvent als Fallback
             GenericPageLoadedEvent::class => 'onPageLoaded',
             PageLoadedEvent::class => 'onPageLoaded'
         ];
@@ -47,7 +46,6 @@ class AlertSubscriber implements EventSubscriberInterface
             return in_array($alert->getRuleId(), $activeRuleIds, true);
         });
 
-        // Wir fügen es zur Page hinzu
         $event->getPage()->addExtension('rootrifs_custom_alerts', $filteredAlerts);
     }
 }
